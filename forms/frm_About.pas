@@ -1,19 +1,29 @@
-unit frm_About;
+(* *****************************************************************************
+  *
+  *   TriboTester
+  *
+  *   Copyright (C) 2015-2020 Oleksiy Penkov
+  *   e-mail: oleksiy.penkov@gmail.com
+  *
+  ****************************************************************************** *)
+unit frm_about;
 
 interface
 
-uses Winapi.Windows, System.Classes, Vcl.Graphics, Vcl.Forms, Vcl.Controls,
-  Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RzStatus, Vcl.StdCtrls, Vcl.Buttons,
+  RzLabel;
 
 type
   TfrmAbout = class(TForm)
-    Panel1: TPanel;
-    OKButton: TButton;
-    ProgramIcon: TImage;
-    ProductName: TLabel;
-    Version: TLabel;
-    Copyright: TLabel;
-    Comments: TLabel;
+    RzLabel1: TRzLabel;
+    BitBtn1: TBitBtn;
+    RzVersionInfo1: TRzVersionInfo;
+    RzVersionInfoStatus2: TRzVersionInfoStatus;
+    RzLabel2: TLabel;
+    Label1: TLabel;
+    RzURLLabel1: TRzURLLabel;
   private
     { Private declarations }
   public
@@ -28,4 +38,3 @@ implementation
 {$R *.dfm}
 
 end.
- 

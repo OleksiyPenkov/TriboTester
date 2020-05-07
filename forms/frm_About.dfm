@@ -1,106 +1,121 @@
 object frmAbout: TfrmAbout
-  Left = 445
-  Top = 127
-  ActiveControl = OKButton
+  Left = 0
+  Top = 0
   BorderStyle = bsDialog
   Caption = 'About'
-  ClientHeight = 218
-  ClientWidth = 298
+  ClientHeight = 286
+  ClientWidth = 278
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clBlack
+  Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poScreenCenter
+  Position = poOwnerFormCenter
   PixelsPerInch = 96
   TextHeight = 13
-  object Panel1: TPanel
-    Left = 8
-    Top = 8
-    Width = 281
-    Height = 161
-    Margins.Left = 2
-    Margins.Top = 2
-    Margins.Right = 2
-    Margins.Bottom = 2
-    BevelOuter = bvLowered
-    TabOrder = 0
-    object ProgramIcon: TImage
-      Left = 8
-      Top = 8
-      Width = 65
-      Height = 57
-      Margins.Left = 2
-      Margins.Top = 2
-      Margins.Right = 2
-      Margins.Bottom = 2
-      IsControl = True
-    end
-    object ProductName: TLabel
-      Left = 88
-      Top = 16
-      Width = 68
-      Height = 13
-      Margins.Left = 2
-      Margins.Top = 2
-      Margins.Right = 2
-      Margins.Bottom = 2
-      Caption = 'Product Name'
-      IsControl = True
-    end
-    object Version: TLabel
-      Left = 88
-      Top = 40
-      Width = 35
-      Height = 13
-      Margins.Left = 2
-      Margins.Top = 2
-      Margins.Right = 2
-      Margins.Bottom = 2
-      Caption = 'Version'
-      IsControl = True
-    end
-    object Copyright: TLabel
-      Left = 8
-      Top = 80
-      Width = 44
-      Height = 13
-      Margins.Left = 2
-      Margins.Top = 2
-      Margins.Right = 2
-      Margins.Bottom = 2
-      Caption = 'Copyright'
-      IsControl = True
-    end
-    object Comments: TLabel
-      Left = 8
-      Top = 104
-      Width = 49
-      Height = 13
-      Margins.Left = 2
-      Margins.Top = 2
-      Margins.Right = 2
-      Margins.Bottom = 2
-      Caption = 'Comments'
-      WordWrap = True
-      IsControl = True
-    end
+  object RzLabel1: TRzLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 272
+    Height = 46
+    Margins.Bottom = 10
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Tribo Tester'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clHotLight
+    Font.Height = -37
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TextStyle = tsShadow
+    ExplicitWidth = 212
   end
-  object OKButton: TButton
-    Left = 120
-    Top = 178
-    Width = 65
-    Height = 33
-    Margins.Left = 2
-    Margins.Top = 2
-    Margins.Right = 2
-    Margins.Bottom = 2
-    Caption = 'OK'
-    Default = True
-    ModalResult = 1
-    TabOrder = 1
-    IsControl = True
+  object RzVersionInfoStatus2: TRzVersionInfoStatus
+    AlignWithMargins = True
+    Left = 3
+    Top = 62
+    Width = 272
+    Margins.Bottom = 0
+    FrameStyle = fsNone
+    Align = alTop
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Alignment = taCenter
+    Field = vifFileVersion
+    VersionInfo = RzVersionInfo1
+    ExplicitLeft = 8
+    ExplicitTop = 168
+  end
+  object RzLabel2: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 92
+    Width = 272
+    Height = 16
+    Margins.Top = 10
+    Margins.Bottom = 10
+    Align = alTop
+    Alignment = taCenter
+    Caption = '(c) 2015-2020 Oleksiy Penkov'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 169
+  end
+  object Label1: TLabel
+    AlignWithMargins = True
+    Left = 3
+    Top = 121
+    Width = 272
+    Height = 32
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Zhejiang University'#13#10'ZJUI Institute'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 108
+  end
+  object RzURLLabel1: TRzURLLabel
+    Left = 32
+    Top = 208
+    Width = 222
+    Height = 13
+    Caption = 'https://github.com/OleksiyPenkov/TriboTester'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsUnderline]
+    ParentFont = False
+    URL = 'https://github.com/OleksiyPenkov/X-RayCalc/'
+  end
+  object BitBtn1: TBitBtn
+    Left = 96
+    Top = 253
+    Width = 75
+    Height = 25
+    Caption = 'Close'
+    ModalResult = 8
+    TabOrder = 0
+  end
+  object RzVersionInfo1: TRzVersionInfo
+    FilePath = 'tribo.exe'
+    Left = 16
+    Top = 160
   end
 end

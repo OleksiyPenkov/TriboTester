@@ -8,7 +8,7 @@ uses Winapi.Windows, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Forms,
   Vcl.ImgList, System.Actions, frm_BaseChart, unit_ForceSensor, RzPanel,
   RzButton, RzStatus, frm_NiError, unit_Config, unit_Globals, unit_CondFile,
   unit_Routines, unit_CustomDriver, unit_Driver, unit_DriverPZ, files_list,
-  frm_CalibrationD;
+  frm_CalibrationD, System.ImageList;
 
 type
   TfrmMain = class(TForm)
@@ -126,6 +126,7 @@ type
     procedure WindowArrangeAllExecute(Sender: TObject);
     procedure actToolsScratchExecute(Sender: TObject);
     procedure actDisplacementCalibrationExecute(Sender: TObject);
+    procedure HelpAbout1Execute(Sender: TObject);
   private
     { Private declarations }
     FNormalChartWin: TBaseChart;
@@ -155,7 +156,7 @@ implementation
 
 uses unit_Const, unit_Helpers,  frm_settings, frm_TestConditions, System.DateUtils,
   frm_Calibration, frm_JoyStick, unit_CursorChanger, ShellApi, frm_Indenation,
-  frm_StaticLoading, frm_ScratchTest;
+  frm_StaticLoading, frm_ScratchTest, frm_about;
 
 procedure TfrmMain.actTestConditionsExecute(Sender: TObject);
 begin
@@ -591,6 +592,11 @@ begin
   if not TConfig.Section<TChartOptions>.NormalChartDraw then FNormalChartWin.WindowState := wsMinimized;
   if not TConfig.Section<TChartOptions>.FrictionChartDraw then FFrictionChartWin.WindowState := wsMinimized;
 
+end;
+
+procedure TfrmMain.HelpAbout1Execute(Sender: TObject);
+begin
+  frmAbout.ShowModal;
 end;
 
 procedure TfrmMain.ProcessTestPause;

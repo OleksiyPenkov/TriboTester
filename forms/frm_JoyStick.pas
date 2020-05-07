@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unit_Driver, RzButton, Vcl.ExtCtrls, Vcl.StdCtrls, RzPanel, RzRadGrp,
-  Vcl.Buttons, Vcl.Menus, Vcl.ImgList, Vcl.ComCtrls;
+  Vcl.Buttons, Vcl.Menus, Vcl.ImgList, Vcl.ComCtrls, System.ImageList;
 
 type
   TfrmJoyStick = class(TForm)

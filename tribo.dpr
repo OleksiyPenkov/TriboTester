@@ -27,13 +27,14 @@ uses
   nidaqmx64 in 'NIDaqMX\nidaqmx64.pas',
   {$ELSE}
   nidaqmx in 'NIDaqMX\nidaqmx.pas',
-  {$ENDIF}
+  {$ENDIF }
   frm_Indenation in 'forms\frm_Indenation.pas' {frmIndentation},
   unit_DriverPZ in 'units\unit_DriverPZ.pas',
   unit_Driver in 'units\unit_Driver.pas',
   frm_StaticLoading in 'forms\frm_StaticLoading.pas' {frmStaticLoading},
   frm_ScratchTest in 'forms\frm_ScratchTest.pas' {frmScratchTest},
-  frm_Calibration in 'forms\frm_Calibration.pas' {frmCalibration};
+  frm_Calibration in 'forms\frm_Calibration.pas' {frmCalibration},
+  frm_about in 'forms\frm_about.pas' {frmAbout};
 
 {$R *.RES}
 
@@ -48,6 +49,7 @@ begin
   Application.CreateForm(TfrmIndentation, frmIndentation);
   Application.CreateForm(TfrmStaticLoading, frmStaticLoading);
   Application.CreateForm(TfrmScratchTest, frmScratchTest);
+  Application.CreateForm(TfrmAbout, frmAbout);
   frmMain.CreateCharts;
   Application.Run;
 end.
